@@ -3,10 +3,25 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.PriorityQueue;
 
+/**
+ * La clase Prioridad contiene un programa principal que lee procesos desde un
+ * archivo de texto
+ * y los inserta en una PriorityQueue del Java Collection Framework para su
+ * posterior atención.
+ */
 public class Prioridad {
+    /**
+     * Método principal que lee los procesos desde un archivo de texto y los inserta
+     * en una
+     * PriorityQueue del Java Collection Framework para su posterior atención.
+     * 
+     * @param args Los argumentos de la línea de comandos (no se utilizan en este
+     *             caso).
+     */
     public static void main(String[] args) {
         PriorityQueue<Proceso> colaPrioridad = new PriorityQueue<>();
 
+        // lector archivo .txt
         try (BufferedReader br = new BufferedReader(new FileReader("procesos.txt"))) {
             String linea;
             while ((linea = br.readLine()) != null) {
